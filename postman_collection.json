@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "3875b842-547c-496c-8750-174d75cba89d",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18497318",
+		"_collection_link": "https://crimson-station-680421.postman.co/workspace/task~d7bc3b29-0f7f-4943-be2d-bef587a4d5fb/collection/18497318-3875b842-547c-496c-8750-174d75cba89d?action=share&source=collection_link&creator=18497318"
+	},
+	"item": [
+		{
+			"name": "registor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test@g.com\",\r\n    \"password\":\"123\",\r\n    \"name\":\"test\",\r\n    \"role\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/Registor",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Registor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test@g.com\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/Login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/Login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY2MzQ3Yjc4ODEwZGQ4YmJhYjA3YWY2OCIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0QGcuY29tIiwicGFzc3dvcmQiOiIxMjMiLCJjcmVhdGVkQXQiOiIyMDI0LTA1LTAzVDA1OjUxOjUyLjQ3OVoiLCJ1cGRhdGVkQXQiOiIyMDI0LTA1LTAzVDA1OjUxOjUyLjQ3OVoiLCJfX3YiOjB9LCJpYXQiOjE3MTQ3MjQ0NTUsImV4cCI6MTcxNDcyODA1NX0.z-YVs_hB8EfTGVh-d4LoIoW_K-uHxxWatXzwSUvsRGE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/create",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filterData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY2MzQ3Yjc4ODEwZGQ4YmJhYjA3YWY2OCIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0QGcuY29tIiwicGFzc3dvcmQiOiIxMjMiLCJjcmVhdGVkQXQiOiIyMDI0LTA1LTAzVDA1OjUxOjUyLjQ3OVoiLCJ1cGRhdGVkQXQiOiIyMDI0LTA1LTAzVDA1OjUxOjUyLjQ3OVoiLCJfX3YiOjB9LCJpYXQiOjE3MTQ3Mjk4ODEsImV4cCI6MTcxNDczMzQ4MX0.D49YtQMK6LMSqveu9NfHx6DzNxm_GO0PDtGA_57i3DA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/filterData?page=1&pageSize=5&name=Product ",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"filterData"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "name",
+							"value": "Product "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY2MzQ3Yjc4ODEwZGQ4YmJhYjA3YWY2OCIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0QGcuY29tIiwicGFzc3dvcmQiOiIxMjMiLCJjcmVhdGVkQXQiOiIyMDI0LTA1LTAzVDA1OjUxOjUyLjQ3OVoiLCJ1cGRhdGVkQXQiOiIyMDI0LTA1LTAzVDA1OjUxOjUyLjQ3OVoiLCJfX3YiOjB9LCJpYXQiOjE3MTQ3Mjk4ODEsImV4cCI6MTcxNDczMzQ4MX0.D49YtQMK6LMSqveu9NfHx6DzNxm_GO0PDtGA_57i3DA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"TEST\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/updateData/6634a02f932904ff2261cd20",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"updateData",
+						"6634a02f932904ff2261cd20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY2MzQ3Yjc4ODEwZGQ4YmJhYjA3YWY2OCIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0QGcuY29tIiwicGFzc3dvcmQiOiIxMjMiLCJjcmVhdGVkQXQiOiIyMDI0LTA1LTAzVDA1OjUxOjUyLjQ3OVoiLCJ1cGRhdGVkQXQiOiIyMDI0LTA1LTAzVDA1OjUxOjUyLjQ3OVoiLCJfX3YiOjB9LCJpYXQiOjE3MTQ3Mjk4ODEsImV4cCI6MTcxNDczMzQ4MX0.D49YtQMK6LMSqveu9NfHx6DzNxm_GO0PDtGA_57i3DA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/deleteData/6634a02f932904ff2261cd20",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"deleteData",
+						"6634a02f932904ff2261cd20"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
